@@ -1,5 +1,11 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
 import { z } from 'zod'
+
+if (process.env.NODE_ENV === 'test') {
+  config({ path: '.env.test' })
+} else {
+  config()
+}
 
 // o z serve para criar um schema (formato de dado)
 // que virá nas variáveis de ambiente
