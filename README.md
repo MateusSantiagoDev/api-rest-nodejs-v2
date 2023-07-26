@@ -8,6 +8,6 @@
 # RN
 
 - [✔] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
-- [] Deve ser possível identificar o usuário entre as requisições;
-- [] O usuário só pode visualizar as transações que ele criou;
+- [✔] Deve ser possível identificar o usuário entre as requisições;
+- [✔] O usuário só pode visualizar as transações que ele criou;
 
