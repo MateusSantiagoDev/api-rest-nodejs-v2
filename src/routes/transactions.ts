@@ -6,6 +6,7 @@ import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
 // obs: os plugins do fastify precisam ser asyncronos sempre
 export async function transactionsRoutes(app: FastifyInstance) {
+ 
   app.get(
     '/',
     {
