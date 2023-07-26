@@ -25,6 +25,14 @@ export async function transactionsRoutes(app: FastifyInstance) {
     return { transaction }
   })
 
+  app.get('/summary', async () => {
+    // rota de resumo
+    // faz uma busca na collectio de transactions e soma todos os amounts
+    // do usuário especifico, o resultado insere em um campo único amount 
+    const summary = await knex('transactions').sum('amount', { as: 'amount'}).first()
+    return { summary }
+  })
+
   app.post('/', async (request, reply) => {
     // usando o zod para tipar (criando um schema) os dados
     const createTransactionBodySchema = z.object({
